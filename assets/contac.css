@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #799351;
+    --second-bg-color: #ededed;
+    --text-color: #131212;
+    --main-color: #A1DD70;
+   
+}
+
+
+body{
+    background: var(--second-bg-color);
+    color: var(--bg-color);
+    padding: 5rem;
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: transparent;
+
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn { 
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    padding: 5px 20px;
+    background-color: transparent;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: var(--main-color);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--second-bg-color);
+    min-width: 160px;
+    padding: 5x 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .login-btn {
+    color: var(--second-bg-color);
+    background-color: #0d71fc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #0b63dd;
+    color: black;
+}
+
+.login-btn, .logout {
+    background-color: #fd0606;
+}
+
+.login-btn, .logout:hover {
+    background-color:  #da0606;
+}
+
+
+section { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 2em;
+ 
+}
+
+.sectionHeader {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    margin-bottom: .5rem;
+}
+
+.sub-heading {
+    text-align: left;
+}
+
+.heading, .sub-heading {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.para {
+    color: var(--text-color);
+}
+
+.para2 {
+    text-align: left;
+}
+
+.contacform {
+    display: grid;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+form {
+    width: 90%;
+}
+
+.input {
+    width: 95%;
+    max-width: 700px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    margin-bottom: 1em;
+    background-color: var(--second-bg-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid #d8d8d8;
+}
+
+.input:focus {
+    border: 1px solid var(--main-color);
+}
+
+.input::placeholder {
+    text-transform: capitalize;
+}
+
+.submit {
+    background-color: var(--bg-color);
+    border: none;
+    color: var(--second-bg-color);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.maps-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.mapsbg {
+    position: absolute;
+    background-color: var(--bg-color);
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.maps {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contacMethod {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+}
+
+.contaction{
+    font-size: 2em;
+    color: var(--text-color);
+    width: 70px;
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        max-width: 1100px;
+    }
+
+    .contacform {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contacMethod{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
